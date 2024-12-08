@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Calculator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <h1></b>Temprature Calculator<b></h1>
+            <nav>
+                <ul>
+                    <li >
+                        <a href="index.html" >Home</a>
+                    </li>
+                    <li >
+                        <a href="radio.html" >Radio</a>
+                    </li>
+                    <li >
+                        <a href="btns.html" >Buttons</a>
+                    </li>
+                    <li >
+                        <a href="drop.html" >Dropdown</a>
+                    </li>
+                </ul>
+            </nav>
+            
+    </header>
+
+    <main>
+        <div>
+            <div class="general">
+                <label>Enter number to convert: </label>
+                <input type="number" id="inpval" placeholder="Value">
+            </div>
+            <div class="general">
+                <label for="options">Choose Conversion Method : </label>
+                <select id = "options">
+                    <option value=""disabled selected>Select Below</option>
+                    <option value="op_fah">Celsius to Fahrenheit</option>
+                    <option value="op_cel">Fahrenheit to Celsius</option>
+                </select>
+            </div>
+            <div>
+                <button id="conv_btn">Convert</button>
+            </div>
+            <div class="general">
+                <label id="result">Result</label>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Website Designed By Marshcool</p>
+    </footer>
+
+    <script src="script_drop.js"></script> <!-- Link to external JS -->
+</body>
+</html>
+
+

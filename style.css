@@ -1,0 +1,86 @@
+/* Basic styling for the webpage */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    display: block;
+}
+
+nav {
+    background-color: #d12148; 
+    padding: 10px;
+}
+
+ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: left; 
+    margin: 0; 
+    padding: 0;
+}
+
+a {
+    color: white; 
+    text-decoration: none;
+}
+
+li {
+    margin: 0 10px;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.general {
+    padding: 10px;
+    border: black;
+}
+
+.centered {
+    text-align: center;
+}
+
+.atag {
+    color: black;
+}
+
+.litag {
+    padding-bottom: 20px;
+    margin: 0 10px;
+}
