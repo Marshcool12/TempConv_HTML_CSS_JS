@@ -1,58 +1,72 @@
 // Convert to Fahrenheit using Buttons
-document.getElementById("btn_fah").addEventListener("click", function () {
-    const input = document.getElementById("inpval").value;
-    const fahrenheit = convtofah(input); // Convert to Fahrenheit
-    document.getElementById("result_btns").textContent = `${fahrenheit.toFixed(2)}°F`;
+document.getElementById("btn_celfah").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const celtfah = convceltofah(input); // Convert to Fahrenheit
+    document.getElementById("result_btns").textContent = `${celtfah.toFixed(2)}°F`;
+});
+
+// Convert to Celsius using Buttons
+document.getElementById("btn_fahcel").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const fahtcel = convfahtocel(input); // Convert to Celsius
+    document.getElementById("result_btns").textContent = `${fahtcel.toFixed(2)}°C`;
+});
+
+// Convert Fahrenheit to Kelvin
+document.getElementById("btn_fahkel").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const fahtkel = convfahtokel(input); // Convert to Kelvin
+    document.getElementById("result_btns").textContent = `${fahtkel.toFixed(2)} K`;
+});
+
+// Convert Celsius to Kelvin
+document.getElementById("btn_celkel").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const celtkel = convceltokel(input); // Convert to Kelvin
+    document.getElementById("result_btns").textContent = `${celtkel.toFixed(2)} K`;
+});
+
+// Convert Kelvin to Fahrenheit
+document.getElementById("btn_kelfah").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const keltfah = convkeltofah(input); // Convert to Fahrenheit
+    document.getElementById("result_btns").textContent = `${keltfah.toFixed(2)}°F`;
+});
+
+// Convert Kelvin to Celsius
+document.getElementById("btn_kelcel").addEventListener("click", function () {
+    const input = parseFloat(document.getElementById("inpval").value);
+    const keltcel = convkeltocel(input); // Convert to Celsius
+    document.getElementById("result_btns").textContent = `${keltcel.toFixed(2)}°C`;
 });
 
 // Function to convert Celsius to Fahrenheit
-function convtofah(celsius) {
-    return (celsius * 9 / 5) + 32; // Conversion formula
+function convceltofah(ctf) {
+    return (ctf * 9 / 5) + 32; // Conversion formula
 }
-
-// Convert to Celsius using Buttons
-document.getElementById("btn_cel").addEventListener("click", function () {
-    const input = document.getElementById("inpval").value;
-    const celsius = convtocel(input); // Convert to Celsius
-    document.getElementById("result_btns").textContent = `${celsius.toFixed(2)}°C`;
-});
 
 // Function to convert Fahrenheit to Celsius
-function convtocel(fahrenheit) {
-    return (fahrenheit - 32) * 5 / 9; // Conversion formula
+function convfahtocel(ftc) {
+    return (ftc - 32) * 5 / 9; // Conversion formula
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("conv_btn").addEventListener("click", function () {
-        const input = parseFloat(document.getElementById("inpval").value);
-        const radios = document.getElementsByName("Temp");
-        let selectedValue = null;
+// Function to convert Celsius to Kelvin
+function convceltokel(ctk) {
+    return (ctk + 273.15); // Conversion formula
+}
 
-        for (const radio of radios) {
-            if (radio.checked) {
-                selectedValue = radio.value;
-                break;
-            }
-        }
+// Function to convert Fahrenheit to Kelvin
+function convfahtokel(ftk) {
+    return ((ftk - 32) * 5 / 9) + 273.15; // Conversion formula
+} 
 
-        const resultLabel = document.getElementById("result");
+// Function to convert Kelvin to Fahrenheit
+function convkeltofah(ktf) {
+    return ((ktf - 273.15) * 9 / 5) + 32; // Conversion formula
+}
 
-        if (selectedValue === "Fahrenheit") {
-            const fahrenheit = convtofah(input);
-            resultLabel.textContent = `${fahrenheit.toFixed(2)}°F`;
-        } else if (selectedValue === "Celsius") {
-            const celsius = convtocel(input);
-            resultLabel.textContent = `${celsius.toFixed(2)}°C`;
-        } else {
-            resultLabel.textContent = "Please select a conversion option!";
-        }
-    });
+// Function to convert Kelvin to Celsius
+function convkeltocel(ktc) {
+    return (ktc - 273.15); // Conversion formula
+}
 
-    function convtofah(celsius) {
-        return (celsius * 9 / 5) + 32;
-    }
-
-    function convtocel(fahrenheit) {
-        return (fahrenheit - 32) * 5 / 9;
-    }
-});

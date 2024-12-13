@@ -34,10 +34,24 @@
             <input type="number" id="inpval" placeholder="Value">
         </div>
         <div class="general">
-            <input type="radio" id="rad_fah" value="Fahrenheit" name="Temp">
-            <label for="rad_fah">Convert To Fahrenheit</label>
-            <input type="radio" id="rad_cel" value="Celsius" name="Temp">
-            <label for="rad_cel">Convert To Celsius</label>
+            <div>
+                <input type="radio" id="rad_celfah" value="cf" name="Temp">
+                <label for="rad_celfah">Celsius To Fahrenheit</label>
+                <input type="radio" id="rad_fahcel" value="fc" name="Temp">
+                <label for="rad_fahcel">Fahrenheit To Celsius</label>
+            </div>
+            <div>
+                <input type="radio" id="rad_celkel" value="ck" name="Temp">
+                <label for="rad_celkel">Celsius To Kelvin</label>
+                <input type="radio" id="rad_fahkel" value="fk" name="Temp">
+                <label for="rad_fahkel">Fahrenheit To Kelvin</label>
+            </div>
+            <div>
+                <input type="radio" id="rad_kelfah" value="kf" name="Temp">
+                <label for="rad_kelfah">Kelvin To Fahrenheit</label>
+                <input type="radio" id="rad_kelcel" value="kc" name="Temp">
+                <label for="rad_kelcel">Kelvin To Celsius</label>
+            </div>
         </div>
         <div>
             <button id="conv_btn">Convert</button>
